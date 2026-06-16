@@ -9,9 +9,6 @@ function Hero() {
         Discover authentic, handcrafted food products from local communities, powered by quality and tradition.
       </p>
 
-      <button className="mt-6 px-6 py-3 bg-green-700 text-white rounded-lg">
-        Shop Now
-      </button>
     </section>
   );
 }

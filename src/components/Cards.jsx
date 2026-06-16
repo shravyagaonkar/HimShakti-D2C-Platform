@@ -1,4 +1,4 @@
-function Card({ title, description, image }) {
+function Card({ title, description, image, price }) {
   return (
     <div className="border rounded-xl shadow-md overflow-hidden">
       <img
@@ -15,17 +15,15 @@ function Card({ title, description, image }) {
         <p className="text-gray-600 mt-2">
           {description}
         </p>
+        <p className="mt-3 text-lg font-semibold text-green-700">
+          ₹{price}
+        </p>
 
         <button
-          onClick={() =>
-            window.open(
-              `https://wa.me/7671819095?text=Hi,%20I%20would%20like%20to%20order%20${title}`,
-              "_blank"
-            )
-          }
+          onClick={() => alert("WhatsApp ordering coming soon!")}
           className="mt-4 px-4 py-2 bg-green-700 text-white rounded"
         >
-          Order via WhatsApp
+        Order via WhatsApp
         </button>
       </div>
     </div>
