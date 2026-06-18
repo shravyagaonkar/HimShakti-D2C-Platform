@@ -4,10 +4,10 @@ function Card({ title, description, image, price }) {
       <img
         src={image}
         alt={title}
-        className="w-full h-48 object-cover"
+        className="w-full h-40 object-cover"
       />
 
-      <div className="p-4">
+      <div className="p-2">
         <h2 className="text-xl font-bold">
           {title}
         </h2>
@@ -15,7 +15,7 @@ function Card({ title, description, image, price }) {
         <p className="text-gray-600 mt-2">
           {description}
         </p>
-        <p className="mt-3 text-lg font-semibold text-green-700">
+        <p className="mt-2o text-lg font-semibold text-green-700">
           ₹{price}
         </p>
 

@@ -1,11 +1,11 @@
 function Hero() {
   return (
-    <section className="text-center py-20 bg-green-100">
-      <h1 className="text-5xl font-bold text-green-800">
+    <section className="text-center py-8 bg-green-100">
+      <h1 className="text-3xl font-bold text-green-800">
         Bringing Rural Goodness to Every Doorstep
       </h1>
 
-      <p className="mt-4 text-lg text-gray-700">
+      <p className="mt-2 text-lg text-gray-700">
         Discover authentic, handcrafted food products from local communities, powered by quality and tradition.
       </p>
 
