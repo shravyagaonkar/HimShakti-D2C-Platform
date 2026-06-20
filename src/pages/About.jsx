@@ -1,7 +1,7 @@
 function About(){
     return(
-      <section className="p-10 min-h-screen bg-amber-50 text-emerald-800">
-      <h1 className="text-4xl font-bold text-center mb-6">
+      <section className="p-10 text-emerald-800 dark:bg-gray-900 ">
+      <h1 className="text-4xl font-bold text-center dark:text-emerald-800 mb-6">
         Welcome to HimShakti 
         </h1>
       <div className="max-w-3xl mx-auto text-center text-gray-700 leading-relaxed">

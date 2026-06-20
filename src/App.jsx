@@ -10,7 +10,9 @@ import Login from "./pages/Login";
 function App() {
   return (
     <BrowserRouter>
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900">
       <Navbar />
+      <main className="flex-1 bg-white dark:bg-gray-900">
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,8 +20,10 @@ function App() {
         <Route path = "/about" element = {<About/>} />
         <Route path="/login" element = {<Login/>} />
       </Routes>
+      </main>
 
       <Footer />
+      </div>
     </BrowserRouter>
   );
 }

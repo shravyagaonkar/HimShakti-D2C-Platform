@@ -26,7 +26,7 @@ function Products() {
   ];
 
   return (
-    <section className="p-8">
+    <section className="p-8 dark:bg-gray-900">
       <h2 className="text-3xl font-bold text-center text-green-800">
         Products
       </h2>
@@ -35,7 +35,7 @@ function Products() {
         Authentic rural products sourced and selected by HimShakti
       </p>
 
-      <div className="flex flex-wrap justify-center gap-5">
+      <div className="flex flex-wrap justify-center gap-5 dark:bg-gray-900">
         {featuredProducts.map((product, index) => (
           <Card
             title={product.title}

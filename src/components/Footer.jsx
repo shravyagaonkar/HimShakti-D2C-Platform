@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="bg-emerald-900 text-white text-center py-6 mt-5">
-      <div className="flex justify-center gap-6 mb-3">
+    <footer className="bg-emerald-900 text-white text-center py-6  dark:bg-gray-900 dark:text-gray-100">
+      <div className="flex justify-center gap-6 mb-5 ">
         <a href="https://www.facebook.com/HimShaktiPvtLtd/">Facebook</a>
         <a href="https://www.instagram.com/himshakti/">Instagram</a>
       </div>

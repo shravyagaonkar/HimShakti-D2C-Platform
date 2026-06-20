@@ -15,7 +15,7 @@ function Card({ title, description, image, price }) {
         <p className="text-gray-600 mt-2">
           {description}
         </p>
-        <p className="mt-2o text-lg font-semibold text-green-700">
+        <p className="mt-2 text-lg font-semibold text-green-700">
           ₹{price}
         </p>
 

@@ -1,8 +1,8 @@
 function Login() {
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-100">
-      <div className="bg-white p-6 rounded shadow w-80">
-        <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
+    <div className="flex-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
+      <div className="bg-white p-6 rounded shadow w-80 dark:bg-gray-900 dark:text-gray-100">
+        <h2 className="text-2xl font-bold text-center mb-4 dark:text-emerald-800">Login</h2>
 
         <input
           type="email"

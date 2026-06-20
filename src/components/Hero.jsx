@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="text-center py-8 bg-green-100">
+    <section className="text-center py-8 bg-green-100 dark:bg-gray-900 dark:text-gray-100">
       <h1 className="text-3xl font-bold text-green-800">
         Bringing Rural Goodness to Every Doorstep
       </h1>
