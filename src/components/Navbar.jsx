@@ -10,6 +10,7 @@ function Navbar() {
   }, [darkMode]);
   return (
     <nav className="flex justify-between items-center px-3 py-2 bg-amber-50 text-emerald-700 dark:bg-gray-900 dark:text-gray-100">
+      <div className="flex flex-wrap gap-2">
       <h1 className="text-2xl font-extrabold">
         HimShakti
       </h1>
@@ -19,6 +20,7 @@ function Navbar() {
         <li><Link to = "/products">Products</Link></li>
         <li><Link to = "/about">About</Link></li>
         <li><Link to = "/login">Login</Link></li>
+        <li><Link to = "/demo">Demo</Link></li>
       </ul>
       <button
         onClick={() => setDarkMode(!darkMode)}
@@ -27,7 +29,7 @@ function Navbar() {
         {darkMode ? "☀️" : "🌙"}
       </button>
 
-    
+    </div>
     </nav>
   );
 }
