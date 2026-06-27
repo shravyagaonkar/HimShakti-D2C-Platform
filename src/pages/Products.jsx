@@ -1,29 +1,15 @@
+import { useEffect, useState } from "react";
 import Card from "../components/Cards";
 
 function Products() {
-  const featuredProducts = [
-    {
-      title: "Cinnamon",
-      description:
-        "A premium-quality organic spice known for its warm aroma and natural sweetness. It supports digestion and adds rich flavor to food and beverages.",
-      image: "/images/Organic Cinnamon.png",
-      price: 250,
-    },
-    {
-      title: "Turmeric Powder",
-      description:
-        "A powerful golden spice rich in curcumin, known for its immunity-boosting and anti-inflammatory properties. Ideal for cooking and wellness drinks.",
-      image: "/images/Turmeric Powder.png",
-      price: 100,
-    },
-    {
-      title: "Honey",
-      description:
-        "Pure, natural honey collected from chemical-free environments. It is a natural energy booster with antibacterial and healing properties.",
-      image: "/images/Honey.png",
-      price: 160,
-    },
-  ];
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/products")
+      .then((response) => response.json())
+      .then((data) => setFeaturedProducts(data))
+      .catch((error) => console.error(error));
+  }, []);
 
   return (
     <section className="p-8 dark:bg-gray-900">
@@ -35,9 +21,10 @@ function Products() {
         Authentic rural products sourced and selected by HimShakti
       </p>
 
-      <div className="flex flex-wrap justify-center gap-5 dark:bg-gray-900">
-        {featuredProducts.map((product, index) => (
+      <div className="flex flex-wrap justify-center gap-5 dark:bg-gray-900 text-green-800">
+        {featuredProducts.map((product) => (
           <Card
+            key={product.id}
             title={product.title}
             description={product.description}
             image={product.image}
