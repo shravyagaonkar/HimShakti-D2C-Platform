@@ -1,6 +1,8 @@
 const express = require("express");
+
 const cors = require("cors");
 require("dotenv").config();
+const mongoose = require("mongoose");
 const path = require("path");
 
 console.log("Loading:", path.resolve(__dirname, "./routes/products.js"));
@@ -11,7 +13,10 @@ console.log(productRoutes);
 
 console.log("productRoutes =", productRoutes);
 const app = express();
-
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 // Middleware
 app.use(cors());
 app.use(express.json());
