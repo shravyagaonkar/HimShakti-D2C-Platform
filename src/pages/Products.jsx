@@ -24,7 +24,7 @@ function Products() {
       <div className="flex flex-wrap justify-center gap-5 dark:bg-gray-900 text-green-800">
         {featuredProducts.map((product) => (
           <Card
-            key={product.id}
+            key={product._id}
             title={product.title}
             description={product.description}
             image={product.image}

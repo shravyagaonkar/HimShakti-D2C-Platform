@@ -1,6 +1,6 @@
 function Card({ title, description, image, price }) {
   return (
-    <div className="border rounded-xl shadow-md overflow-hidden">
+    <div className="w-270 border rounded-xl shadow-md overflow-hidden">
       <img
         src={image}
         alt={title}

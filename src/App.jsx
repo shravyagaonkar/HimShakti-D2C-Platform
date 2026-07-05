@@ -8,6 +8,7 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Demo from "./pages/Demo";
+import Admin from "./pages/Admin";
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
         <Route path = "/about" element = {<About/>} />
         <Route path="/login" element = {<Login/>} />
         <Route path="/demo" element = {<Demo/>} />
+        <Route path="/admin" element = {<Admin/>}/>
       </Routes>
       </main>
 

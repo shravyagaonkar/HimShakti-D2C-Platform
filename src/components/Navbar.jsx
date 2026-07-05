@@ -21,6 +21,7 @@ function Navbar() {
         <li><Link to = "/about">About</Link></li>
         <li><Link to = "/login">Login</Link></li>
         <li><Link to = "/demo">Demo</Link></li>
+        <li><Link to = "/admin">Admin</Link></li>
       </ul>
       <button
         onClick={() => setDarkMode(!darkMode)}
