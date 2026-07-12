@@ -61,3 +61,6 @@ npm run dev
 ```
 
 ---
+## MongoDB Schema Diagram
+
+![MongoDB Schema](./Schema-Diagram.png)
