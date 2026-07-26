@@ -58,6 +58,7 @@ function Admin() {
 
 
   const generateDescription = async () => {
+   
 
     if(!product.title.trim()){
 
@@ -65,6 +66,10 @@ function Admin() {
       return;
 
     }
+    setProduct((prev) => ({
+  ...prev,
+  description: "",
+}));
 
 
     try {
