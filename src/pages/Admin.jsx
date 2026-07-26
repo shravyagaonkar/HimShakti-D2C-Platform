@@ -266,30 +266,29 @@ if (Number(product.price) <= 0) {
 
 
 
-  const handleDelete = async(id)=>{
+ const handleDelete = async (id) => {
+  if (!window.confirm("Delete this product?")) return;
 
-
-    if(!window.confirm("Delete this product?"))
-      return;
-
-
-
-    await fetch(
-
+  try {
+    const response = await fetch(
       `http://localhost:5000/api/products/${id}`,
-
       {
-
-        method:"DELETE",
-
+        method: "DELETE",
       }
-
     );
 
+    if (!response.ok) {
+      throw new Error("Failed to delete product");
+    }
+
+    alert("Product deleted successfully.");
 
     fetchProducts();
-
-  };
+  } catch (error) {
+    console.log(error);
+    alert(error.message);
+  }
+};
 
 
 
@@ -393,10 +392,13 @@ if (Number(product.price) <= 0) {
 
           onClick={generateDescription}
 
-          disabled={aiLoading}
+          disabled={aiLoading || !product.title.trim()}
 
-          className="bg-purple-700 text-white px-4 py-2 rounded"
-
+          className={`px-4 py-2 rounded text-white transition-colors ${
+  aiLoading || !product.title.trim()
+    ? "bg-gray-400 cursor-not-allowed"
+    : "bg-purple-700 hover:bg-purple-800"
+}`}
         >
 
           {
