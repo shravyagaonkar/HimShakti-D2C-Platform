@@ -145,7 +145,21 @@ function Admin() {
 
 
     try{
+      if (!product.title.trim()) {
+  alert("Product title is required.");
+  return;
+}
 
+if (!product.description.trim()) {
+  alert("Description is required.");
+  return;
+}
+
+if (Number(product.price) <= 0) {
+  alert("Price must be greater than 0.");
+  return;
+}
+        
       setLoading(true);
 
 
