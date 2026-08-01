@@ -173,7 +173,14 @@ app.get("/test-ai",(req,res)=>{
 
 });
 
+const cors = require("cors");
 
+app.use(
+  cors({
+    origin: "him-shakti-d2-c-platform-qbrp.vercel.app",
+    credentials: true,
+  })
+);
 
 
 // Server Start
