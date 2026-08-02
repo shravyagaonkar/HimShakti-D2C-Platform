@@ -102,11 +102,11 @@ MongoDB Atlas was chosen because it is a NoSQL document database that integrates
 
 ## Live Frontend URL
 
-https://your-frontend.vercel.app
+https://him-shakti-d2-c-platform-f3ld.vercel.app/
 
 ## Live Backend URL
 
-https://your-backend.vercel.app
+https://him-shakti-d2-c-platform-umber.vercel.app/
 
 ---
 
