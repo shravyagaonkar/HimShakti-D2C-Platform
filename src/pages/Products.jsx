@@ -5,7 +5,7 @@ function Products() {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
       .then((response) => response.json())
       .then((data) => setFeaturedProducts(data))
       .catch((error) => console.error(error));

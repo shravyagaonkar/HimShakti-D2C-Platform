@@ -29,7 +29,7 @@ function Admin() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/products"
+        `${import.meta.env.VITE_API_URL}/api/products`
       );
 
       const data = await response.json();
@@ -78,7 +78,7 @@ function Admin() {
 
 
       const response = await fetch(
-        "http://localhost:5000/api/ai/generate",
+        `${import.meta.env.VITE_API_URL}/api/ai/generate`,
         {
           method:"POST",
 
@@ -175,7 +175,7 @@ if (Number(product.price) <= 0) {
 
         response = await fetch(
 
-          `http://localhost:5000/api/products/${editingId}`,
+          `${import.meta.env.VITE_API_URL}/products/${editingId}`,
 
           {
 
@@ -198,7 +198,7 @@ if (Number(product.price) <= 0) {
 
         response = await fetch(
 
-          "http://localhost:5000/api/products",
+          `${import.meta.env.VITE_API_URL}/products`,
 
           {
 
@@ -271,7 +271,7 @@ if (Number(product.price) <= 0) {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/products/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/products/${id}`,
       {
         method: "DELETE",
       }

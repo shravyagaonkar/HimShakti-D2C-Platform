@@ -1,25 +1,37 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a full-stack web application built using React, Vite, Express.js, MongoDB Atlas, and Tailwind CSS. It includes user authentication, CRUD operations, and an AI-powered product description generator.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Registration & Login
+- JWT Authentication
+- Product CRUD Operations
+- AI Product Description Generator
+- Responsive UI
+- MongoDB Atlas Database
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
+- React
+- Vite
+- Tailwind CSS
+- React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- Hugging Face Inference API
 
-## Database Choice
+---
 
-I chose MongoDB Atlas because it is a NoSQL document database that works well with JavaScript applications. Using Mongoose made it easy to define schemas and perform CRUD operations.
-
-## Database Setup
+## Installation
 
 ### 1. Clone the repository
 
@@ -27,40 +39,103 @@ I chose MongoDB Atlas because it is a NoSQL document database that works well wi
 git clone <repository-url>
 ```
 
-### 2. Navigate to the backend folder
+### 2. Install dependencies
+
+#### Backend
 
 ```bash
 cd backend
-```
-
-### 3. Install dependencies
-
-```bash
 npm install
 ```
 
-### 4. Create a `.env` file
+#### Frontend
 
-Add the following variables:
+```bash
+cd frontend
+npm install
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file inside the backend folder.
 
 ```env
 MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+HF_API_KEY=your_huggingface_api_key
 PORT=5000
 ```
 
-### 5. Start the backend
+---
+
+## Running the Project
+
+### Start Backend
 
 ```bash
 npm start
 ```
 
-### 6. Start the frontend
+### Start Frontend
 
 ```bash
 npm run dev
 ```
 
 ---
+
+## Database Choice
+
+MongoDB Atlas was chosen because it is a NoSQL document database that integrates well with JavaScript applications. Mongoose simplifies schema creation, validation, and CRUD operations.
+
+---
+
 ## MongoDB Schema Diagram
 
 ![MongoDB Schema](./Schema-Diagram.png)
+
+---
+
+# Deployment
+
+## Live Frontend URL
+
+https://your-frontend.vercel.app
+
+## Live Backend URL
+
+https://your-backend.vercel.app
+
+---
+
+## Tech Stack Summary
+
+- React + Vite
+- Tailwind CSS
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- Hugging Face Inference API
+
+---
+
+## Known Limitations (Free Tier)
+
+- Vercel serverless functions may experience a short cold start after periods of inactivity.
+- The free plan has execution time and resource limits.
+- External APIs (such as Hugging Face) may respond more slowly depending on network conditions and usage limits.
+
+---
+
+## Deployment Status
+
+The application has been successfully deployed on Vercel.
+
+- Frontend deployed on Vercel
+- Backend deployed on Vercel
+- MongoDB Atlas used as the cloud database
+- AI feature connected to Hugging Face API
