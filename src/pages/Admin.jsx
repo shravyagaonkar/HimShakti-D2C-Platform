@@ -26,23 +26,26 @@ function Admin() {
 
 
   const fetchProducts = async () => {
-    try {
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/products`
+    );
 
-      const response = await fetch(
-  `${import.meta.env.VITE_API_URL}/api/products`
-);
+    const data = await response.json();
 
-      const data = await response.json();
+    console.log(data);
 
-      console.log("Products:", data);
-
+    if (Array.isArray(data)) {
       setProducts(data);
-
-    } catch(error){
-      console.log(error);
+    } else {
+      console.error("Expected an array, got:", data);
+      setProducts([]);
     }
-  };
-
+  } catch (error) {
+    console.log(error);
+    setProducts([]);
+  }
+};
 
 
   const handleChange = (e) => {
