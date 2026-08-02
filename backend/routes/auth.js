@@ -8,7 +8,7 @@ const {
 
 const User = require("../model/User");
 const verifyToken = require(
-  "../middleware/verifyToken"
+  "../MiddleWare/verifyToken"
 );
 
 const router = express.Router();
