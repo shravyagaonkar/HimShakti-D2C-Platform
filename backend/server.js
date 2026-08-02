@@ -175,7 +175,7 @@ app.get("/test-ai",(req,res)=>{
 
 app.use(
   cors({
-    origin: "https://him-shakti-d2-c-platform-e2qg.vercel.app",
+    origin: "https://him-shakti-d2-c-platform-e2qg-git-main-shravyagaonkars-projects.vercel.app",
     credentials: true,
   })
 );
