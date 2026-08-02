@@ -28,13 +28,10 @@ function Admin() {
   const fetchProducts = async () => {
     try {
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(productData),
-});
+      const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/products`
+);
+
       const data = await response.json();
 
       console.log("Products:", data);
@@ -178,7 +175,7 @@ if (Number(product.price) <= 0) {
 
         response = await fetch(
 
-          `${import.meta.env.VITE_API_URL}/products/${editingId}`,
+          `${import.meta.env.VITE_API_URL}/api/products/${editingId}`,
 
           {
 
@@ -201,7 +198,7 @@ if (Number(product.price) <= 0) {
 
         response = await fetch(
 
-          `${import.meta.env.VITE_API_URL}/products`,
+          `${import.meta.env.VITE_API_URL}/api/products`,
 
           {
 
