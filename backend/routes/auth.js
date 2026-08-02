@@ -7,7 +7,7 @@ const {
 } = require("express-validator");
 
 const User = require("../model/User");
-const verifyToken = require("../middleware/verifyToken");
+const verifyToken = require("../temp/verifyToken");
 const router = express.Router();
 
 /* REGISTER */
