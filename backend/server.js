@@ -101,7 +101,7 @@ const authLimiter = rateLimit({
   windowMs:
   60 * 1000,
 
-  max:1,
+  max:150,
 
   standardHeaders:true,
 
